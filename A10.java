@@ -1,36 +1,19 @@
-package pkg1;
-
-class Human{
-    public void job(){
-        System.out.println("Working Professional");}}
-class Teacher extends Human{
-    public void job(){
-        System.out.println("Teacher");
+//package pkg1
+class MultiThreadingOne extends Thread{
+    public void run(){
+        try{
+             System.out.println("Thread "+Thread.currentThread().getId()+" is running");}
+        catch(Exception e){
+            System.out.println("Exception is caught");  
+        }
+             
     }
-    }
-class Doctor extends Human{
-    public void job(){
-        System.out.println("Docter");}}
+}
 public class A10{
     public static void main(String[] args){
-        Human amar=new Human();
-        Teacher babu=new Teacher();
-        Doctor chandra=new Doctor();
-        Human dinesh=new Doctor();
-        amar.job();
-        babu.job();
-        chandra.job();
-        dinesh.job();}}
-        
-        
-        
-    
-
-    
-    
-        
-    
-
-
-    
-
+        for(int i=0;i<20;i++){
+            MultiThreadingOne mt1=new MultiThreadingOne();
+            mt1.start();
+        }
+    }
+}
