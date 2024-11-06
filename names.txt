@@ -1,6 +1,3 @@
-Akshata 
-Chirashree
-Bhavana
-Gagana
-Sanvi
-Isra
+akshata
+chirashree
+bhavana
