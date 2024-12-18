@@ -29,21 +29,9 @@ public class A4 {
         System.out.print("Point1 coordinates are ");
         System.out.print(points[0]+","+points[1]+"\n");
         System.out.println(point1.distance(5,6));
-        System.out.println(point1.distance());}}
-
-        
-        
-            
-        
-    
-    
-        
-   
-            
-        
-            
+        System.out.println(point1.distance());}}   
         
     }    
-    }
+   }
 }
  
