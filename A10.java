@@ -1,19 +1,18 @@
-//package pkg1
-class MultiThreadingOne extends Thread{
-    public void run(){
-        try{
-             System.out.println("Thread "+Thread.currentThread().getId()+" is running");}
-        catch(Exception e){
-            System.out.println("Exception is caught");  
-        }
-             
-    }
-}
+package pkg;
+import pkg2.MyPackage2;
+import pkg2.MyPackage3;
 public class A10{
-    public static void main(String[] args){
-        for(int i=0;i<20;i++){
-            MultiThreadingOne mt1=new MultiThreadingOne();
-            mt1.start();
+
+        public static void main(String[] args) {
+                System.out.println("Package");
+                MyPackage2 mypack1=new MyPackage2();
+                mypack1.display();
+                MyPackage3 mp3 = new MyPackage3();
+                mp3.display();
+                
         }
-    }
 }
+
+
+
+
