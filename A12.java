@@ -1,19 +1,29 @@
-//package pkg1
-class MultiThreadingThree extends Thread{
-    public void run(){
-        for(int i=0;i<10;i++){
-            System.out.println(i);
-        try{
-             Thread.sleep(1000);}
-        catch(InterruptedException e){
+package pkg;
+class MyThread extends Thread{
+        public MyThread(String name) {
+                super(name);
+                start();
         }
+        public void run() {
+                for(int i=1;i<=5;i++) {
+                        System.out.println("Thread "+i);
+                        try {
+                                Thread.sleep(1);
+                        }
+                        catch(InterruptedException e) {
+                                System.out.println("Thread interrupted");
+                        }
+                }        
         }
-    }
 }
-             
-public class A12{
-    public static void main(String[] args){
-         MultiThreadingThree mt1=new MultiThreadingThree();
-            mt1.start();
+public class A12 {
+
+        public static void main(String[] args) {
+                System.out.println("Thread");
+                MyThread t1=new MyThread("ChildThread");
+               
+               
+
         }
-    }
+
+}
